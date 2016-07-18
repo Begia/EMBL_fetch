@@ -5,6 +5,8 @@
 #This program eats a list of accession numbers as an input and fetches their sequences from the database using DbFetch
 #Output is a tab limited .csv file with metadata and protein sequences, and a .fa file of the CDS (also possible to get up and downstream sequences in a specified range)
 
+#ipak() from https://gist.github.com/stevenworthington/3178163
+
 ipak <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg)) 
